@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AffirmSDKDemo_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affirm test purchase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQM-RG-jlD">
+                                <rect key="frame" x="110" y="317" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFK-i2-Htl">
+                                <rect key="frame" x="86" y="346" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="500" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-yf-VHL">
+                                <rect key="frame" x="138" y="343" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LSD-iP-NvE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PzP-Wf-ou0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRP-4O-opU">
+                                <rect key="frame" x="17" y="381" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLL-nD-8TV">
+                                <rect key="frame" x="136" y="389" width="105" height="30"/>
+                                <state key="normal" title="Buy with Affirm">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCheckout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="90x-i3-YUI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzA-Fq-ycT">
+                                <rect key="frame" x="152" y="449" width="73" height="30"/>
+                                <state key="normal" title="Site Modal"/>
+                                <connections>
+                                    <action selector="presentSiteModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d62-P2-YBL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owh-se-mMN">
+                                <rect key="frame" x="138" y="419" width="101" height="30"/>
+                                <state key="normal" title="Product Modal"/>
+                                <connections>
+                                    <action selector="presentProductModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYr-gY-otp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LzA-Fq-ycT" secondAttribute="bottom" constant="188" id="7Hb-Jo-WyX"/>
+                            <constraint firstItem="LzA-Fq-ycT" firstAttribute="centerX" secondItem="Owh-se-mMN" secondAttribute="centerX" id="9Cc-gw-iPs"/>
+                            <constraint firstItem="LzA-Fq-ycT" firstAttribute="top" secondItem="Owh-se-mMN" secondAttribute="bottom" id="C7d-AW-5TP"/>
+                            <constraint firstItem="Owh-se-mMN" firstAttribute="top" secondItem="dLL-nD-8TV" secondAttribute="bottom" id="JXt-IF-u0S"/>
+                            <constraint firstItem="dLL-nD-8TV" firstAttribute="top" secondItem="nRP-4O-opU" secondAttribute="bottom" constant="8" id="PAA-Pp-f2S"/>
+                            <constraint firstItem="jQM-RG-jlD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zb4-js-xJl"/>
+                            <constraint firstItem="fO3-yf-VHL" firstAttribute="centerX" secondItem="jQM-RG-jlD" secondAttribute="centerX" id="bnW-Ky-yXh"/>
+                            <constraint firstItem="Owh-se-mMN" firstAttribute="centerX" secondItem="dLL-nD-8TV" secondAttribute="centerX" id="efU-oC-4dB"/>
+                            <constraint firstItem="nRP-4O-opU" firstAttribute="top" secondItem="fO3-yf-VHL" secondAttribute="bottom" constant="8" id="h3h-c8-H5J"/>
+                            <constraint firstItem="KFK-i2-Htl" firstAttribute="top" secondItem="jQM-RG-jlD" secondAttribute="bottom" constant="8" id="hsF-zh-hwh"/>
+                            <constraint firstItem="fO3-yf-VHL" firstAttribute="leading" secondItem="KFK-i2-Htl" secondAttribute="trailing" constant="8" symbolic="YES" id="j84-tR-a9l"/>
+                            <constraint firstItem="fO3-yf-VHL" firstAttribute="baseline" secondItem="KFK-i2-Htl" secondAttribute="baseline" id="oz8-bg-cSj"/>
+                            <constraint firstItem="dLL-nD-8TV" firstAttribute="centerX" secondItem="fO3-yf-VHL" secondAttribute="centerX" id="qhb-QT-l8x"/>
+                            <constraint firstItem="nRP-4O-opU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="tEB-pD-pP8"/>
+                            <constraint firstItem="fO3-yf-VHL" firstAttribute="centerX" secondItem="nRP-4O-opU" secondAttribute="centerX" id="xDq-QC-c1G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="nRP-4O-opU" id="TGx-CE-HLx"/>
+                        <outlet property="textField" destination="fO3-yf-VHL" id="Gr7-kn-VNe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,5 +1,5 @@
 use_frameworks!
 
-target 'AffirmSDKDemo' do
+target 'AffirmSDKDemo-Swift' do
     pod 'AffirmSDK', '2.2.0'
 end

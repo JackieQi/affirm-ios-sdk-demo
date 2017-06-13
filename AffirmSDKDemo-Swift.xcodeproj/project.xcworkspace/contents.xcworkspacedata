@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AffirmSDKDemo.xcodeproj">
+      location = "self:AffirmSDKDemo-Swift.xcodeproj">
    </FileRef>
 </Workspace>
